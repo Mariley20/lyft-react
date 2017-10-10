@@ -26,7 +26,7 @@ const App = (props) => {
 	return (<BrowserRouter>
 		<div>
 			<Switch>
-				<Route exact path="/"
+				<Route exact path="/inicio"
 				       render={() => <Redirect to= {'/inicio'}/>}/>
 				<Route  path="/inicio" render={() => <Inicio model={model} />}/>
 				<Route  path="/validarTelefono" render={() => <ValidarTelefono model={model} />}/>
