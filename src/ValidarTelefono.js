@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './ValidarTelefono.css';
 import {
-	NavLink,
+    NavLink,
 } from 'react-router-dom'
 
-class App extends Component {
+class ValidarTelefono extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -86,10 +86,15 @@ class App extends Component {
                                         <NavLink
                                             to={""}
                                             className="btn btn-lg btn-block btn-lyft">
-                                            </NavLink>
+                                        </NavLink>
                                         :
                                         <button className="btn btn-primary disabled">Next</button>
                                 }
+                            </div>
+                            <div>
+                                <video className="video-container video-container-overlay" autoPlay="true" loop muted={this.props.muted}>
+                                    <source src={this.props.introVideo} type="video/mp4" />
+                                </video>
                             </div>
                         </form>
 
@@ -101,4 +106,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default ValidarTelefono;
