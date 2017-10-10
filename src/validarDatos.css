@@ -1,12 +1,4 @@
-.title {
-	margin-left:20px;
-}
 
-
-section {
-	margin: 0 auto;
-
-}
 /* Getting rid of vertical lines on input boxes*/
 #commentName {
 	border-right: none;
