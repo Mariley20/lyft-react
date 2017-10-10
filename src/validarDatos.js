@@ -80,9 +80,7 @@ class SignUpForm extends Component {
 				<section className="container-fluid form">
 
 					<label className="form-check-label">
-						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/>
-						I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
-						<input type="checkbox" name="checkbox" id="commentInfo"/> I agree to Lyft's <a> Terms of Service</a>
+						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/> I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
 					</label>
 
 					{

@@ -2,9 +2,6 @@
 	margin-left:20px;
 }
 
-hr {
-	width: 100%;
-}
 
 section {
 	margin: 0 auto;
@@ -26,31 +23,15 @@ section {
 	border-left: none;
 }
 
-
-
-
-/* Button Next */
-footer .btn-login {
-	width: 100%;
-	padding: 10px; 
-	border:none;
-	border-radius: 5px;
-	background-color: #FC1EBF;
-	color: #fff;
-}
-
 section a {
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 16px;
+	
+}
+.form{
+	text-align: center;
 }
 
-footer {
-	position: absolute;
-	bottom:0px;
-    right:0px;
-    left: 0px;
-	margin-bottom: 10px;
-}
 .help-block{
     display: inline; 
     padding-right:30px;
@@ -105,78 +86,4 @@ footer {
 	background-color: white;
 	border-right: 0;
   }
-  #map{
-	width: 100%;
-	height: 100vh;
-  }
-  .value{
-	width: 50px;
-	border-right: 0;
-	font-weight: bold;
-  }
-  .sobre{
-	z-index: 100;
-  }
-  .wrapper {
-	position: relative;
-  }
-  .over_map {
-	position: absolute;
-	top: 20px;
-	z-index: 99;
-  }
-  .logo-gift{
-	border-radius: 50%;
-	margin-top:-5px;
-	padding-top: 2%;
-	width: 9vh;
-	height: 9vh;
-	background-color: #fff;
-	border:3px solid #ddd;
-  }
-  .pie{
-	padding-top:40vh;
-  }
-  .div-input-address{
-	margin-top: 30vh;
-  }
-  .start{
-	color:blue;
-  }
-  .end{
-	color:#D90472;
-  }
-  .flex{
-	width: 100%;
-	height: 70vh;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-items: flex-end;
-  }
-  .address,.price{
-	border-bottom:1px solid #ccc;
-	width: 100vw;
-	height: 10vh;
-  }
-  .price{
-	background-color: #eee;
-	height: 10vh;
-  }
-  .address{
-	display: flex;
-	align-items: center;
-	background-color: white;
-	flex-wrap: wrap;
-	padding-top: 2.5vh;
   
-  }
-  .car{
-	float:left;
-  }
-  #labocode{
-	justify-content: center;
-	margin:0 auto;
-	padding-top: 50vw;
-  
-  }
