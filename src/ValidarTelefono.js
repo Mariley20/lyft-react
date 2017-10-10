@@ -64,9 +64,7 @@ class App extends Component {
                             </div>
                         </form>
 
-                        <h5>
-                            We'll send a text to verify your phone
-        </h5>
+                        <h5>We'll send a text to verify your phone</h5>
                     </section>
                 </div>
             </center>
