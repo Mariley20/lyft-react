@@ -32,7 +32,7 @@ class ValidarDatos extends Component {
           		    <header>
 				    <div className="row">
 					    <div className="col-md-1 col-sm-1 ">
-						<a href="index.html" className="goback" id="#btnGoBack"><i className="fa fa-angle-left fa-3x"></i></a>
+						<a href="javascript:window.history.back();"><i className="fa fa-angle-left fa-3x"></i></a>
 					    </div>
 			            <div className="col-md-9 col-sm-9  text-center title">
 				        <h1>Sign up</h1>
@@ -80,13 +80,14 @@ class ValidarDatos extends Component {
 				<section className="container-fluid form">
 
 					<label className="form-check-label">
-						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/> I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
+						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/>
+						I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
 					</label>
 
 					{
 						this.state.goFordward ?
 							<NavLink
-								to={"/lyftmap"}
+								to={"/mapaGoogle"}
 								className="btn btn-lg btn-block btn-lyft">Next</NavLink>
 							:
 							<button
