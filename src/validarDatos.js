@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './ValidarDatos.css';
 
 class App extends Component {
     render() {
-        return ( <div className = "App" >
+        return ( <div className="App" >
+        
           		    <header>
 				    <div className="row">
 					    <div className="col-md-1 col-sm-1 ">
@@ -17,8 +18,9 @@ class App extends Component {
   				    </div>
 		        	</header>
 
-                    <div class="container">
+                    <div className="container">
                       <div className="row">
+                      {/* Nombre y apellido input */}
                         <div className="form-group col-md-12" id="input-name-group">
                             <div className="input-group">
                              <span className="input-group-addon"><i className="fa fa-user-o" aria-hidden="true"></i></span>
@@ -27,6 +29,7 @@ class App extends Component {
 	                                    <input id="commentLastName" name="lastname" type="text"  className="form-control" required placeholder="Last Name"/>
                             </div>
                         </div>
+                        {/* Mensajes para nombre y apellido input */}
                         <span className="help-block" id="commentNamePrompt"></span>
                         <span className="help-block" id="commentLastNamePrompt"></span>
                         {/* <!-- Email input --> */}
@@ -44,17 +47,22 @@ class App extends Component {
 					        <div className="form-group">
 					        	<div id="commentPrompt" className="alert">
 					      		</div>
-					        </div> 
-                            <div class="container">
-					<div class="row ">
-						<div class="col-md-10 col-xs-offset-1 text-center">
-                            <div class="checkbox">
+					        </div>                        
+                      </div>
+                    </div>
+                    {/* para el checkbox */}
+                    <div className="container">
+					    <div className="row ">
+						    <div className="col-md-10 col-xs-offset-1 text-center">
+                            <div className="checkbox">
                                 <input type="checkbox" name="checkbox" id="commentInfo"/> I agree to Lyft's <span> Terms of Service</span>
                             </div>
                             <span id="commentInfoPrompt"></span>
-						</div>
-					</div>
+						    </div>
+					    </div>
 				</div>
+                
+                {/* Para mi boton de enviar */}
                 <footer>
 				<div className="container">
 					<div className="row">
@@ -64,9 +72,7 @@ class App extends Component {
 					</div>
 				</div>
 			</footer>
-                      </div>
-                    </div>
-                </div>
+            </div>
         
         );
     }
