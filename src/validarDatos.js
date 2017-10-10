@@ -87,7 +87,7 @@ class ValidarDatos extends Component {
 					{
 						this.state.goFordward ?
 							<NavLink
-								to={"/lyftmap"}
+								to={"/mapaGoogle"}
 								className="btn btn-lg btn-block btn-lyft">Next</NavLink>
 							:
 							<button
