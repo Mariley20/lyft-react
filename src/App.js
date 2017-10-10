@@ -15,9 +15,8 @@ import ValidarDatos from './ValidarDatos';
 import MapaGoogle from './MapaGoogle';
 
 const NotFound = (props) => {
-	const {model} =  props;
 	return (
-		<div><Inicio model={model} /></div>
+		<Inicio />
 	);
 }
 
@@ -36,7 +35,7 @@ const App = (props) => {
 
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
-				<Route component={model}/>
+				<Route render={() => <Inicio model={model} />}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
