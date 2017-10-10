@@ -16,7 +16,7 @@ import MapaGoogle from './MapaGoogle';
 
 const NotFound = (props) => {
 	return (
-		<div><h2> Error 404! </h2></div>
+		<Inicio />
 	);
 }
 
@@ -35,7 +35,7 @@ const App = (props) => {
 
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
-				<Route component={NotFound}/>
+				<Route render={() => <Inicio model={model} />}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
