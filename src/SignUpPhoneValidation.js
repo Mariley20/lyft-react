@@ -66,7 +66,8 @@ class SignUpPhoneValidation extends Component{
       <header>
         <div className="btnVolver">
          <NavLink to="/Inicio">
-                <i className="volver">atras</i>
+         <i className="fa fa-angle-left fa-3x"></i>
+                {/* <i className="volver">atras</i> */}
           </NavLink>
         </div>
         <h1 className="text-center">Sign Up</h1>

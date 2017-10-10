@@ -1,16 +1,17 @@
 // para pull webkitRequestAnimationFrame
 // para parar en la terminal control C
+// para buscar control +f
 
 // IMPORTANDO PARA PODER UTILIZAR
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './ValidarTelefono.css';
 import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
+    BrowserRouter,
+    Route,
+    Switch,
+    NavLink,
+    Redirect
 } from 'react-router-dom'
 
 // CREANDO MI COMPONENTE
@@ -37,6 +38,7 @@ class ValidarTelefono extends Component {
 
         return (
             <center>
+                <div className="App">
                 <div className="container">
                     <header>
                         <div className="row sign-up">
@@ -52,8 +54,8 @@ class ValidarTelefono extends Component {
                     </header>
                     <section>
                         <form>
+
                             <div className="col-auto">
-                                <h3>Ingresa tu número para empezar</h3>
                                 <label
                                     className="sr-only"
                                     htmlFor="inlineFormInputGroup">Username</label>
@@ -91,7 +93,7 @@ class ValidarTelefono extends Component {
                                                 type="checkbox"
                                                 onChange={onInputChange}
                                                 required />
-                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
+                                            I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
                                         </label>
                                     </div>
                                 </div>
@@ -105,15 +107,12 @@ class ValidarTelefono extends Component {
                                         <button className="btn btn-primary disabled">Next</button>
                                 }
                             </div>
-                            <div>
-                                <video className="container video-container-overlay" autoPlay="true" loop muted={this.props.muted}>
-                                    <source src={this.props.introVideo} type="video/mp4" />
-                                </video>
-                            </div>
+
                         </form>
 
                         <h5>We'll send a text to verify your phone</h5>
                     </section>
+                </div>
                 </div>
             </center>
         );
