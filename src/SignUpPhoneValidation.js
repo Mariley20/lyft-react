@@ -7,7 +7,7 @@ import {
 	Redirect
 } from 'react-router-dom'
 import './SignUpPhoneValidation.css';
- 
+
 class SignUpPhoneValidation extends Component{
   constructor(props){
     super(props);
@@ -53,9 +53,9 @@ class SignUpPhoneValidation extends Component{
       });
     } else {
       this.setState({
-        validar : false 
+        validar : false
       });
-    } 
+    }
   }
   validarPin(input){
     this.pinUsuario = input;
@@ -65,8 +65,8 @@ class SignUpPhoneValidation extends Component{
       <div className="text-center">
       <header>
         <div className="btnVolver">
-         <NavLink to="/signup">
-                <i className="material-icons volver">keyboard_arrow_left</i>
+         <NavLink to="/Inicio">
+                <i className="volver">atras</i>
           </NavLink>
         </div>
         <h1 className="text-center">Sign Up</h1>
@@ -84,21 +84,21 @@ class SignUpPhoneValidation extends Component{
           this.validarPin(this.valorInput);
         }}>
           <strong>LAB-</strong>
-          <input type="number" 
-                 value={this.valorInput} 
+          <input type="number"
+                 value={this.valorInput}
                  onChange={(e) => {this.inputCambio(e)}}/>
         {
 
-            this.state.validar ? 
-            <NavLink 
-                  to = "/signup-form"    
-                 className="btn btn-lg btnSiguiente " 
+            this.state.validar ?
+            <NavLink
+                  to = "/validarDatos"
+                 className="btn btn-lg btnSiguiente "
                  >
                  Next
               </NavLink>
                 :
-            <button 
-                 className="btn btn-lg btnSiguiente disabled" 
+            <button
+                 className="btn btn-lg btnSiguiente disabled"
                  >
                  Next
           </button>
@@ -107,11 +107,11 @@ class SignUpPhoneValidation extends Component{
         </form>
       </div>
       }
-      {!this.state.mostrar && 
+      {!this.state.mostrar &&
         <div>
           <button className="btnSiguiente" onClick={(e) => {this.mostrarTodo(e)}}>Generar Pin</button>
-        </div> 
-      }  
+        </div>
+      }
       </div>
     );
   }

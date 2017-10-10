@@ -6,7 +6,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './ValidarTelefono.css';
 import {
-    NavLink,
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
 } from 'react-router-dom'
 
 // CREANDO MI COMPONENTE
@@ -19,7 +23,7 @@ class ValidarTelefono extends Component {
 
     }
 
-    
+
 
     render() {
         const { model } = this.props;
@@ -87,14 +91,14 @@ class ValidarTelefono extends Component {
                                                 type="checkbox"
                                                 onChange={onInputChange}
                                                 required />
-                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a> 
+                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
                                         </label>
                                     </div>
                                 </div>
                                 {
                                     this.state.goFordward ?
                                         <NavLink
-                                            to={"/singUpPhoneValidation"}
+                                            to={"/signUpPhoneValidation"}
                                             className="btn btn-lg btn-block btn-lyft"> Next
                                         </NavLink>
                                         :

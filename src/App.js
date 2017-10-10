@@ -10,9 +10,9 @@ import './App.css';
 
 import Inicio from './Inicio';
 import ValidarTelefono from './ValidarTelefono';
+import SignUpPhoneValidation from './SignUpPhoneValidation';
 import ValidarDatos from './ValidarDatos';
 import MapaGoogle from './MapaGoogle';
-import SignUpPhoneValidation from './SignUpPhoneValidation';
 
 const NotFound = (props) => {
 	return (
