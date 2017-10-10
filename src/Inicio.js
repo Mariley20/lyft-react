@@ -11,6 +11,7 @@ import {
 const Inicio = ( {model} ) => {
 
 	return (
+		<body className="primera">
     <div className="container">
       <div id="app-content">
         <header className="text-center">
@@ -28,6 +29,7 @@ const Inicio = ( {model} ) => {
         </section>
       </div>
     </div>
+		</body>
 	);
 }
 
