@@ -1,3 +1,7 @@
+// para pull webkitRequestAnimationFrame
+// para parar en la terminal control C
+
+// IMPORTANDO PARA PODER UTILIZAR
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './ValidarTelefono.css';
@@ -5,6 +9,7 @@ import {
     NavLink,
 } from 'react-router-dom'
 
+// CREANDO MI COMPONENTE
 class ValidarTelefono extends Component {
     constructor(props) {
         super(props);
@@ -78,14 +83,15 @@ class ValidarTelefono extends Component {
                                                 type="checkbox"
                                                 onChange={onInputChange}
                                                 required />
+                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a> />
                                         </label>
                                     </div>
                                 </div>
                                 {
                                     this.state.goFordward ?
                                         <NavLink
-                                            to={""}
-                                            className="btn btn-lg btn-block btn-lyft">
+                                            to={"/ValidarDatos"}
+                                            className="btn btn-lg btn-block btn-lyft"> Next
                                         </NavLink>
                                         :
                                         <button className="btn btn-primary disabled">Next</button>
