@@ -11,7 +11,7 @@ import './App.css';
 import Inicio from './Inicio';
 import ValidarTelefono from './ValidarTelefono';
 import ValidarDatos from './ValidarDatos';
-import LyftMap from './LyftMap';
+import MapaGoogle from './MapaGoogle';
 
 const NotFound = (props) => {
 	return (
@@ -31,7 +31,7 @@ const App = (props) => {
 				<Route  path="/validarTelefono" render={() => <ValidarTelefono model={model} />}/>
 				<Route  path="/validarDatos" render={() => <ValidarDatos model={model} />}/>
 
-				<Route  path="/lyftmap" render={() => <LyftMap model={model} />}/>
+				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
 				<Route component={NotFound}/>
 			</Switch>
