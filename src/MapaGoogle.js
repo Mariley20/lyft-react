@@ -2,19 +2,30 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './MapaGoogle.css';
 
-class App extends Component {
+import Form from 'react-validation/build/form';
+import Input from 'react-validation/build/input';
+import React, { Component } from 'react';
+ 
+export default class Login extends Component {
     render() {
-        return ( <div className = "App" >
-            <header className = "App-header" >
-            <img src = { logo } className = "App-logo" alt = "logo" />
-            <h1 className = "App-title" > Welcome to React </h1> </header> <p className = "App-intro" >
-            To get started, edit <code> src / App.js </code> and save to reload. </p>
+        return <Form>
+            <h3>Login</h3>
             <div>
-              <button className="btn btn-primary">Validar Telefono pagina</button>
+                <label>
+                    Email*
+                    <Input value='email@email.com' name='email' validations={[required, email]}/>
+                </label>
             </div>
+            <div>
+                <label>
+                    Password*
+                    <Input type='password' name='password' validations={[required]}/>
+                </label>
             </div>
-        );
+            <div>
+                <Button>Submit</Button>
+            </div>
+        </Form>;
     }
 }
-
 export default App;
