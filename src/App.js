@@ -12,6 +12,7 @@ import Inicio from './Inicio';
 import ValidarTelefono from './ValidarTelefono';
 import ValidarDatos from './ValidarDatos';
 import MapaGoogle from './MapaGoogle';
+import SignUpPhoneValidation from './SignUpPhoneValidation';
 
 const NotFound = (props) => {
 	return (
@@ -29,6 +30,7 @@ const App = (props) => {
 				       render={() => <Redirect to= {'/inicio'}/>}/>
 				<Route  path="/inicio" render={() => <Inicio model={model} />}/>
 				<Route  path="/validarTelefono" render={() => <ValidarTelefono model={model} />}/>
+				<Route path="/signUpPhoneValidation" render={() => <SignUpPhoneValidation model={model}/>}/>
 				<Route  path="/validarDatos" render={() => <ValidarDatos model={model} />}/>
 
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
