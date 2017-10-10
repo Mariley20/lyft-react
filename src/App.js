@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
     render() {
         return (
-          <div class="fluid-container">
+          <div className="container">
             <div id="app-content">
-              <header>
-                <div><img src="assets/img/logo.png" class="img-responsive logo" /></div>
+              <header className="text-center">
+                <div><img className="img-fluid logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Lyft_logo.svg/1200px-Lyft_logo.svg.png" /></div>
               </header>
               <section>
-                <div class="container">
-                  <div class="row ">
-                    <div class="col-sm-6 col-xs-6 btn-container text-right">
-				                <a class="btn btn-1 btn-lg" id="login" href="#" role="button">Log in</a>
+                  <div className="row text-center">
+                    <div className="col-6 col-6">
+				                <a className="btn btn-1 btn-lg" href="" role="button">Log in</a>
                     </div>
-                    <div class="col-sm-6 col-xs-6 btn-container ">
-				                <a class="btn btn-2 btn-lg" href="index-phone.html" role="button">Sign up</a>
+                    <div className="col-6 col-6">
+				                <a className="btn btn-2 btn-lg" href="" role="button">Sign up</a>
                     </div>
-                  </div>
                 </div>
               </section>
             </div>
