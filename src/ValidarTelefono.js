@@ -1,9 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './ValidarTelefono.css';
+import {
+	NavLink,
+} from 'react-router-dom'
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            goFordward: false
+        }
+
+    }
     render() {
+        const { model } = this.props;
+        console.log('App');
+
+        const onInputChange = (e) => {
+            this.setState({
+                goFordward: e.target.checked
+            });
+        }
+
         return (
             <center>
                 <div className="App">
@@ -30,23 +49,25 @@ class App extends Component {
                                         <select
                                             title="Select your surfboard"
                                             className="selectpicker input-group-addon">
-                                            <option alt>
+                                            <option>
                                                 PERÚ +51
-                                                    </option>
+                                            </option>
                                             <option>
                                                 CHILE +56
-                                                    </option>
+                                            </option>
                                             <option>
                                                 MEXICO +52
-                                                        </option>
+                                            </option>
                                         </select>
                                     </div>
                                     <input
                                         id="inlineFormInputGroup"
-                                        type="number"
-                                        name="numero"
+                                        type="tel"
+                                        name="telefono"
+                                        title="Escribre 9 digitos"
                                         className="form-control"
                                         placeholder={958297890}
+                                        pattern="[0-9]{9}"
                                         required />
                                 </div>
                                 <div className="col-auto">
@@ -54,13 +75,21 @@ class App extends Component {
                                         <label className="form-check-label">
                                             <input
                                                 className="form-check-input"
-                                                type="checkbox" />
+                                                type="checkbox"
+                                                onChange={onInputChange}
+                                                required />
                                         </label>
                                     </div>
                                 </div>
-                                <div className="col-auto">
-                                    <button type="submit" className="btn btn-primary">Next</button>
-                                </div>
+                                {
+                                    this.state.goFordward ?
+                                        <NavLink
+                                            to={""}
+                                            className="btn btn-lg btn-block btn-lyft">
+                                            </NavLink>
+                                        :
+                                        <button className="btn btn-primary disabled">Next</button>
+                                }
                             </div>
                         </form>
 
