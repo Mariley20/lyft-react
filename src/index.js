@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import App from './ValidarTelefono';
-// import App from './ValidarDatos';
-// import App from './MapaGoogle';
+import LyftModel from './LyftModel';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render( < App / > , document.getElementById('root'));
+const model = new LyftModel();
+const render = () => {
+	ReactDOM.render(<App model = {model}/>, document.getElementById('root'));
+}
+model.subscribe(render);
+render();
+
 registerServiceWorker();
