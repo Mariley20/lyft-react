@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './MapaGoogle.css';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
@@ -22,7 +28,7 @@ const MyMapComponent = compose(
   </GoogleMap>
 )
 
-class App extends React.Component {
+class MapaGoogle extends React.Component {
   state = {
     isMarkerShown: false,
   }
@@ -48,4 +54,4 @@ class App extends React.Component {
       />)
   }
 }
-export default App;
+export default MapaGoogle;
