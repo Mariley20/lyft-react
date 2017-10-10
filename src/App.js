@@ -15,8 +15,9 @@ import ValidarDatos from './ValidarDatos';
 import MapaGoogle from './MapaGoogle';
 
 const NotFound = (props) => {
+	const {model} =  props;
 	return (
-		<div><h2> Error 404! </h2></div>
+		<div><Inicio model={model} /></div>
 	);
 }
 
@@ -35,7 +36,7 @@ const App = (props) => {
 
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
-				<Route component={Inicio}/>
+				<Route component={model}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
