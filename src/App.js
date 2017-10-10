@@ -26,7 +26,7 @@ const App = (props) => {
 	return (<BrowserRouter>
 		<div>
 			<Switch>
-				<Route exact path="/inicio"
+				<Route exact path="/"
 				       render={() => <Redirect to= {'/inicio'}/>}/>
 				<Route  path="/inicio" render={() => <Inicio model={model} />}/>
 				<Route  path="/validarTelefono" render={() => <ValidarTelefono model={model} />}/>
@@ -35,7 +35,7 @@ const App = (props) => {
 
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
-				<Route component={NotFound}/>
+				<Route component={Inicio}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
