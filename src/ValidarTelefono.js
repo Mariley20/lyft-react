@@ -18,6 +18,9 @@ class ValidarTelefono extends Component {
         }
 
     }
+
+    
+
     render() {
         const { model } = this.props;
         console.log('App');
@@ -30,12 +33,12 @@ class ValidarTelefono extends Component {
 
         return (
             <center>
-                <div className="App">
+                <div className="container">
                     <header>
                         <div className="row sign-up">
                             <div className="col-sm-12">
                                 <div className="img-logo">
-                                    <img className="imgProfesore" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c525.png" alt="" />
+                                    <img className="imgProfesore" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Lyft_logo.svg/1200px-Lyft_logo.svg.png" alt="" />
                                 </div>
                                 <h5>
                                     Join now for free ride credit
@@ -46,6 +49,7 @@ class ValidarTelefono extends Component {
                     <section>
                         <form>
                             <div className="col-auto">
+                                <h3>Ingresa tu número para empezar</h3>
                                 <label
                                     className="sr-only"
                                     htmlFor="inlineFormInputGroup">Username</label>
@@ -83,14 +87,14 @@ class ValidarTelefono extends Component {
                                                 type="checkbox"
                                                 onChange={onInputChange}
                                                 required />
-                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a> />
+                                                I agree to Lyft's <a href="lyft.com"> Terms of Service</a> 
                                         </label>
                                     </div>
                                 </div>
                                 {
                                     this.state.goFordward ?
                                         <NavLink
-                                            to={"/ValidarDatos"}
+                                            to={"/singUpPhoneValidation"}
                                             className="btn btn-lg btn-block btn-lyft"> Next
                                         </NavLink>
                                         :
@@ -98,7 +102,7 @@ class ValidarTelefono extends Component {
                                 }
                             </div>
                             <div>
-                                <video className="video-container video-container-overlay" autoPlay="true" loop muted={this.props.muted}>
+                                <video className="container video-container-overlay" autoPlay="true" loop muted={this.props.muted}>
                                     <source src={this.props.introVideo} type="video/mp4" />
                                 </video>
                             </div>
