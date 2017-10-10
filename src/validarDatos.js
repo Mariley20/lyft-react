@@ -9,7 +9,7 @@ import {
 	Redirect
 } from 'react-router-dom'
 
-class SignUpForm extends Component {
+class ValidarDatos extends Component {
 	constructor (props) {
 		super (props);
 		this.state = {
@@ -101,4 +101,4 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm;
+export default ValidarDatos;
