@@ -21,6 +21,12 @@ class LyftModel {
 		console.log("phone: "+this.userInfo.phone);
 		this.notify();
 	}
+	addUser () {
+		console.log(this.userInfo.name);
+		console.log(this.userInfo.surname);
+		console.log(this.userInfo.email);
+		this.notify();
+	}
 	setUserInfo (info) {
 		this.userInfo = info;
 		//Utils.store('lyft', this.userInfo);

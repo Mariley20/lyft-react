@@ -26,22 +26,7 @@ class ValidarDatos extends Component {
 				goFordward: e.target.checked
 			});
 		}
-		const validations = () => {
-			this.setState({
-				validation: true
-			});
-			if (model.userInfo.name === '' && model.userInfo.surname === '' && model.userInfo.email === '' && !(/^\^s+$/g.test(model.email))) {
-				this.setState({
-					next: false
-				});
-			}else {
-				this.setState({
-					next: true
-				});
-			}
-		}
         return ( <div>
-        
           		    <header>
 				    <div className="row">
 					    <div className="col-md-1 col-sm-1 ">
@@ -56,22 +41,18 @@ class ValidarDatos extends Component {
 					<form
 						onSubmit={e => {
 						e.preventDefault();
-						model.userInfo.validations(model.userInfo.input);
+						model.addUser();
 						}}
 					>
                     {/* <div className="container"> */}
                       <div className="row">
                     {/* Nombre y apellido input */}
-					  <div className="form-group col-md-12" id="input-name-group">
-					
-					
+					  <div className="form-group col-md-12">
                             <div className="input-group">
                              <span className="input-group-addon"><i className="fa fa-user-o" aria-hidden="true"></i></span>
-                             <input  name="name" type="text"  className="form-control" placeholder="First Name" onChange={e => model.name = e.target.value}/>
-                             {model.userInfo.name === '' && this.state.validation && <p className="error">Please enter a name</p>}
+                             <input  onChange={e => (model.userInfo.name = e.target.value)} type="text"  className="form-control" placeholder="First Name"/>
 							 <span className="input-group-addon spanLastName"></span>
-	                    	 <input  name="lastname" type="text"  className="form-control"  placeholder="Last Name"  onChange={e => model.surname = e.target.value} />
-							 {model.userInfo.surname === '' && this.state.validation && <p className="error">Please enter a name</p>}
+	                    	 <input  onChange={e => (model.userInfo.surname = e.target.value)} type="text"  className="form-control"  placeholder="Last Name"/>
 							</div>
                         </div>
                          {/* <!-- Email input --> */}
@@ -79,9 +60,7 @@ class ValidarDatos extends Component {
                                 	<div className="input-group">
 	                                    <div className="input-group-addon"><i className="fa fa-envelope-o" aria-hidden="true"></i>
 	                                    </div>
-	                                    <input  name="email" type="text" className="form-control"  placeholder="Email" onChange={e => model.userInfo.email = e.target.value}/>
-										{model.userInfo.email === '' && this.state.validation && <p className="error">Please enter an email</p>}
-									</div>
+	                                    <input onChange={e => (model.userInfo.email = e.target.value)}  type="text" className="form-control"  placeholder="Email"/></div>
                                 </div> 
      				
                                  
