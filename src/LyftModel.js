@@ -17,6 +17,10 @@ class LyftModel {
 		this.isRouting = false;
 		this.targetPlace = null;
 	}
+	addPhone() {
+		console.log("phone: "+this.userInfo.phone);
+		this.notify();
+	}
 	setUserInfo (info) {
 		this.userInfo = info;
 		//Utils.store('lyft', this.userInfo);
