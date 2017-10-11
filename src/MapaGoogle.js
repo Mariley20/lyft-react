@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import MapaGoogle from './MapaGoogle';
+import GoogleMaps from './GoogleMaps';
+import './MapaGoogle.css';
 import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
  import {
 	BrowserRouter,
@@ -75,7 +76,7 @@ const MapaGoogle = ({model}) => {
 				Ruta
 			</button>
 		</div>
-		<MapaGoogle
+		<GoogleMaps
 			model = {model}
 			properties={properties}
 			activeProperty={activeProperty}
