@@ -1,3 +1,4 @@
+
 // para pull webkitRequestAnimationFrame
 // para parar en la terminal control C
 // para buscar control +f
@@ -23,8 +24,6 @@ class ValidarTelefono extends Component {
         }
 
     }
-
-
 
     render() {
         const { model } = this.props;
@@ -53,8 +52,11 @@ class ValidarTelefono extends Component {
                         </div>
                     </header>
                     <section>
-                        <form>
-
+                        <form onSubmit={e => {
+                                e.preventDefault();
+                                 model.addPhone(name);
+                                }}
+                            >
                             <div className="col-auto">
                                 <label
                                     className="sr-only"
@@ -76,9 +78,8 @@ class ValidarTelefono extends Component {
                                         </select>
                                     </div>
                                     <input
-                                        id="inlineFormInputGroup"
+                                    onChange={e => (model.userInfo.phone = e.target)}
                                         type="tel"
-                                        name="telefono"
                                         title="Escribre 9 digitos"
                                         className="form-control"
                                         placeholder={958297890}
@@ -99,12 +100,14 @@ class ValidarTelefono extends Component {
                                 </div>
                                 {
                                     this.state.goFordward ?
+                                    <button type="submit">
                                         <NavLink
                                             to={"/signUpPhoneValidation"}
                                             className="btn btn-lg btn-block btn-lyft"> Next
                                         </NavLink>
+                                    </button>
                                         :
-                                        <button className="btn btn-primary disabled">Next</button>
+                                        <button  className="btn btn-primary disabled">Next</button>
                                 }
                             </div>
 
