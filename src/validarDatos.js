@@ -26,9 +26,7 @@ class ValidarDatos extends Component {
 				goFordward: e.target.checked
 			});
 		}
-
         return ( <div>
-        
           		    <header>
 				    <div className="row">
 					    <div className="col-md-1 col-sm-1 ">
@@ -40,62 +38,56 @@ class ValidarDatos extends Component {
 	       			    </div>
   				    </div>
 		        	</header>
-
-                    <div className="container">
+					<form
+						onSubmit={e => {
+						e.preventDefault();
+						model.addUser();
+						}}
+					>
+                    {/* <div className="container"> */}
                       <div className="row">
-                      {/* Nombre y apellido input */}
-                        <div className="form-group col-md-12" id="input-name-group">
+                    {/* Nombre y apellido input */}
+					  <div className="form-group col-md-12">
                             <div className="input-group">
                              <span className="input-group-addon"><i className="fa fa-user-o" aria-hidden="true"></i></span>
-                             <input  name="name" type="text"  className="form-control" placeholder="First Name" required/>
-                             <span className="input-group-addon spanLastName"></span>
-	                                    <input  name="lastname" type="text"  className="form-control"  placeholder="Last Name" required/>
-                            </div>
+                             <input  onChange={e => (model.userInfo.name = e.target.value)} type="text"  className="form-control" placeholder="First Name"/>
+							 <span className="input-group-addon spanLastName"></span>
+	                    	 <input  onChange={e => (model.userInfo.surname = e.target.value)} type="text"  className="form-control"  placeholder="Last Name"/>
+							</div>
                         </div>
-                        {/* Mensajes para nombre y apellido input */}
-                        <span className="help-block" ></span>
-                        <span className="help-block" ></span>
-                        {/* <!-- Email input --> */}
-                                <div className="form-group col-md-12" >
+                         {/* <!-- Email input --> */}
+						 <div className="form-group col-md-12" >
                                 	<div className="input-group">
 	                                    <div className="input-group-addon"><i className="fa fa-envelope-o" aria-hidden="true"></i>
 	                                    </div>
-	                                    <input  name="email" type="text" className="form-control"  placeholder="Email" required/>
-                                	</div>
-                                </div>  
-                                {/* <!-- Mensajes para email input-->  */}
-                                <span className="help-block" ></span>
-					        
-					       {/* <!-- Mensaje de boton Next --> */}
-					        <div className="form-group">
-					        	<div  className="alert">
-					      		</div>
-					        </div>                        
+	                                    <input onChange={e => (model.userInfo.email = e.target.value)}  type="text" className="form-control"  placeholder="Email"/></div>
+                                </div> 
+     				
+                                 
                       </div>
-                    </div>
-                    {/* para el checkbox */}
+                    {/* </div> */}
                    
                 
                 {/* Para mi boton de enviar */}
-				<section className="container-fluid form">
-
-					<label className="form-check-label">
+				{/* <section className="container-fluid form"> */}
+					<div className="text-center">
+					<label className="form-check-label text-center">
 						<input className="form-check-input" id="agreeUser" type="checkbox" onChange={onInputChange}/>
 						I agree to Lyft's <a href="lyft.com"> Terms of Service</a>
 					</label>
-
+					</div>
 					{
 						this.state.goFordward ?
 							<NavLink
 								to={"/mapaGoogle"}
 								className="btn btn-lg btn-block btn-lyft">Next</NavLink>
 							:
-							<button
-								className="btn btn-lg btn-block btn-lyft disabled">Next</button>
+							<button className="btn btn-lg btn-block btn-lyft disabled">Next</button>
 
 					}
 
-				</section>
+				{/* </section> */}
+				</form>
             </div>
         
         );
