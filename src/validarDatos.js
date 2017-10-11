@@ -47,9 +47,9 @@ class ValidarDatos extends Component {
                         <div className="form-group col-md-12" id="input-name-group">
                             <div className="input-group">
                              <span className="input-group-addon"><i className="fa fa-user-o" aria-hidden="true"></i></span>
-                             <input  name="name" type="text"  className="form-control" placeholder="First Name" required/>
+                             <input  name="name" type="text"  className="form-control" placeholder="First Name" onChange={onInputChange}/>
                              <span className="input-group-addon spanLastName"></span>
-	                                    <input  name="lastname" type="text"  className="form-control"  placeholder="Last Name" required/>
+	                    	 <input  name="lastname" type="text"  className="form-control"  placeholder="Last Name" onChange={onInputChange}/>
                             </div>
                         </div>
                         {/* Mensajes para nombre y apellido input */}
