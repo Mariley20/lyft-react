@@ -36,6 +36,7 @@ const App = (props) => {
 				<Route  path="/mapaGoogle" render={() => <MapaGoogle model={model} />}/>
 
 				<Route render={() => <Inicio model={model} />}/>
+				// <Route path='/lyft-react' render={() => <Redirect to="/inicio"  />}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
