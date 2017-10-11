@@ -20,19 +20,23 @@ class ValidarTelefono extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            goFordward: false
+            goFordward: false,
+            phone: null
         }
 
     }
 
     render() {
         const { model } = this.props;
-        console.log('App');
+        console.log(model);
 
         const onInputChange = (e) => {
+            if(model.userInfo.phone!=null){
             this.setState({
                 goFordward: e.target.checked
             });
+        }
+
         }
 
         return (
@@ -54,7 +58,7 @@ class ValidarTelefono extends Component {
                     <section>
                         <form onSubmit={e => {
                                 e.preventDefault();
-                                 model.addPhone(name);
+                                 model.addPhone();
                                 }}
                             >
                             <div className="col-auto">
@@ -78,7 +82,7 @@ class ValidarTelefono extends Component {
                                         </select>
                                     </div>
                                     <input
-                                    onChange={e => (model.userInfo.phone = e.target)}
+                                    onChange={e => (model.userInfo.phone = e.target.value)}
                                         type="tel"
                                         title="Escribre 9 digitos"
                                         className="form-control"
