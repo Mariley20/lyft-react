@@ -5,8 +5,8 @@
 .img-logo img{
     width: 20%;
 }
-button .disabled{
-background-color: #D90472;
-color:white;
-border-radius: none;
+
+#btnNextPhone{
+    background-color: #D90472;
+    border-color: #D90472;
 }

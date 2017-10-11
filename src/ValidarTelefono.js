@@ -5,7 +5,6 @@
 
 // IMPORTANDO PARA PODER UTILIZAR
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './ValidarTelefono.css';
 import {
     BrowserRouter,
@@ -31,11 +30,11 @@ class ValidarTelefono extends Component {
         console.log(model);
 
         const onInputChange = (e) => {
-            if(model.userInfo.phone!=null){
+            // if(model.userInfo.phone!=null){
             this.setState({
                 goFordward: e.target.checked
             });
-        }
+        // }
 
         }
 
@@ -104,7 +103,7 @@ class ValidarTelefono extends Component {
                                 </div>
                                 {
                                     this.state.goFordward ?
-                                    <button type="submit">
+                                    <button id="btnNextPhone" className="btn btn-lg btn-block btn-lyft disabled" type="submit">
                                         <NavLink
                                             to={"/signUpPhoneValidation"}
                                             className="btn btn-lg btn-block btn-lyft"> Next
