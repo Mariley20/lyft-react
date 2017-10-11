@@ -1,3 +1,4 @@
+
 // para pull webkitRequestAnimationFrame
 // para parar en la terminal control C
 // para buscar control +f
@@ -23,8 +24,6 @@ class ValidarTelefono extends Component {
         }
 
     }
-
-
 
     render() {
         const { model } = this.props;
