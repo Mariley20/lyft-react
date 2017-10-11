@@ -11,8 +11,7 @@ const loadMaps = (cb) => {
 
 }
 
-
- class GoogleMaps extends React.Component {
+class GoogleMaps extends React.Component {
 	constructor(props) {
 		super(props);
 

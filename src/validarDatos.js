@@ -38,12 +38,12 @@ class ValidarDatos extends Component {
 	       			    </div>
   				    </div>
 		        	</header>
-					<form
+				<form
 						onSubmit={e => {
 						e.preventDefault();
 						model.addUser();
 						}}
-					>
+				>
                     {/* <div className="container"> */}
                       <div className="row">
                     {/* Nombre y apellido input */}
