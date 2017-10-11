@@ -1,12 +1,5 @@
 
-/* Getting rid of vertical lines on input boxes*/
-#commentName {
-	border-right: none;
-}
 
-#commentLastName {
-	border-left: none;
-}
 /* Last Name Span Erased */
 .spanLastName {
     padding: 0;
@@ -23,7 +16,10 @@ section a {
 .form{
 	text-align: center;
 }
-
+.error{
+	color: #F70909;
+	font-size: 85%;
+}
 .help-block{
     display: inline; 
     padding-right:30px;
