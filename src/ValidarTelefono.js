@@ -13,7 +13,6 @@ import {
     NavLink,
     Redirect
 } from 'react-router-dom'
-
 // CREANDO MI COMPONENTE
 class ValidarTelefono extends Component {
     constructor(props) {
@@ -28,14 +27,11 @@ class ValidarTelefono extends Component {
     render() {
         const { model } = this.props;
         console.log(model);
-
         const onInputChange = (e) => {
             // if(model.userInfo.phone!=null){
             this.setState({
                 goFordward: e.target.checked
             });
-        // }
-
         }
 
         return (
@@ -113,9 +109,7 @@ class ValidarTelefono extends Component {
                                         <button  className="btn btn-primary disabled">Next</button>
                                 }
                             </div>
-
                         </form>
-
                         <h5>We'll send a text to verify your phone</h5>
                     </section>
                 </div>
