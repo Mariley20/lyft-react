@@ -27,6 +27,14 @@ class LyftModel {
 		console.log(this.userInfo.email);
 		this.notify();
 	}
+	 openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+	 closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+
+
 	setUserInfo (info) {
 		this.userInfo = info;
 		//Utils.store('lyft', this.userInfo);
